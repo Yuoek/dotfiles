@@ -3,6 +3,10 @@
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
 
+export PATH=$PATH:$PREFIX/texlive/bin/aarch64-linux
+export MANPATH=$MANPATH:$PREFIX/texlive/texmf-dist/doc/man
+export INFOPATH=$INFOPATH:$PREFIX/texlive/texmf-dist/doc/info
+
  ## llm
 export LLM_KEY=sk-eed203e77451477da6b0a55ac44e2246
 export SILICONFLOW_TOKEN=sk-psbulfyeksopdecegacsawiimusfpjdxoqkxudhivqnjbaim
