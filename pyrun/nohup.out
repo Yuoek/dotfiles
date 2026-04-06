@@ -1,0 +1,123 @@
+/data/data/com.termux/files/usr/bin/mysqld_safe: Deprecated program name. It will be removed in a future release, use 'mariadbd-safe' instead
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.0.1. Set the 'ServerName' directive globally to suppress this message
+Loading the library from the following files:
+	/data/data/com.termux/files/home/Yu/KiwiZim/kiwix.xml
+[Wed Feb 11 21:03:15 2026] PHP 8.4.2 Development Server (http://localhost:8070) started
+WebUI 将在内部准备不久后启动。请稍等…
+260211 21:03:15 mysqld_safe Logging to '~/Yuoek/Yu/DB/localhost.err'.
+The library was successfully loaded.
+The Kiwix server is running and can be accessed in the local network at: 
+  - http://192.168.1.17:8084
+  - http://[2409:8a6a:7a37:45c0:b7db:4c76:f187:e69]:8084
+
+******** 信息 ********
+要控制 qBittorrent，请访问下列地址的 WebUI：http://localhost:8090
+260211 21:03:15 mysqld_safe Starting mariadbd daemon with databases from ~/Yuoek/Yu/DB
+/data/data/com.termux/files/usr/bin/mariadbd-safe-helper: Can't create/write to file '~/Yuoek/Yu/DB/localhost.err' (Errcode: 2 "No such file or directory")
+"The XKEYBOARD keymap compiler (xkbcomp) reports:"
+"> "Warning:          Could not resolve keysym XF86OK
+"> "Warning:          Could not resolve keysym XF86GoTo
+"> "Warning:          Could not resolve keysym XF86VendorLogo
+"> "Warning:          Could not resolve keysym XF86MediaSelectProgramGuide
+"> "Warning:          Could not resolve keysym XF86MediaSelectProgramGuide
+"> "Warning:          Could not resolve keysym XF86MediaSelectHome
+"> "Warning:          Could not resolve keysym XF86MediaLanguageMenu
+"> "Warning:          Could not resolve keysym XF86MediaTitleMenu
+"> "Warning:          Could not resolve keysym XF86AudioChannelMode
+"> "Warning:          Could not resolve keysym XF86MediaSelectPC
+"> "Warning:          Could not resolve keysym XF86MediaSelectTV
+"> "Warning:          Could not resolve keysym XF86MediaSelectCable
+"> "Warning:          Could not resolve keysym XF86MediaSelectVCR
+"> "Warning:          Could not resolve keysym XF86MediaSelectVCRPlus
+"> "Warning:          Could not resolve keysym XF86MediaSelectSatellite
+"> "Warning:          Could not resolve keysym XF86MediaSelectCD
+"> "Warning:          Could not resolve keysym XF86MediaSelectTape
+"> "Warning:          Could not resolve keysym XF86MediaSelectRadio
+"> "Warning:          Could not resolve keysym XF86MediaSelectTuner
+"> "Warning:          Could not resolve keysym XF86MediaPlayer
+"> "Warning:          Could not resolve keysym XF86MediaSelectTeletext
+"> "Warning:          Could not resolve keysym XF86MediaSelectAuxiliary
+"> "Warning:          Could not resolve keysym XF86MediaPlaySlow
+"> "Warning:          Could not resolve keysym XF86NumberEntryMode
+"Errors from xkbcomp are not fatal to the X server"
+Starting up http-server, serving /data/data/com.termux/files/home/Yuoek
+
+http-server version: 14.1.1
+
+http-server settings: 
+CORS: disabled
+Cache: 3600 seconds
+Connection Timeout: 120 seconds
+Directory Listings: visible
+AutoIndex: visible
+Serve GZIP Files: false
+Serve Brotli Files: false
+Default File Extension: none
+
+Available on:
+  http://192.168.1.17:8088
+  http://127.0.0.1:8088
+Hit CTRL-C to stop the server
+
+
+(xfce4-session:15318): libxfce4util-WARNING **: 21:03:16.573: Failed to get a ConsoleKit proxy: Could not connect: No such file or directory
+** Message: 21:03:16.586: Failed to fetch _NET_NUMBER_OF_DESKTOPS; assuming 1
+** Message: 21:03:16.586: Failed to get _NET_WORKAREA; using full screen dimensions
+** Message: 21:03:16.586: Failed to fetch _NET_CURRENT_DESKTOP; assuming 0
+** Message: 21:03:16.586: Failed to fetch _NET_CURRENT_DESKTOP; assuming 0
+gpg-agent[15418]: socket file removed - retrying binding
+gpg-agent[15418]: socket file removed - retrying binding
+gpg-agent[15418]: socket file removed - retrying binding
+gpg-agent[15418]: socket file removed - retrying binding
+gpg-agent[15420]: gpg-agent (GnuPG) 2.5.11 started
+** Message: 21:03:16.961: Failed to fetch _NET_CURRENT_DESKTOP; assuming 0
+
+(xfwm4:15423): xfwm4-WARNING **: 21:03:17.076: Unsupported GL renderer (llvmpipe (LLVM 21.1.6, 128 bits)).
+[2026-02-11T13:03:17.128Z] info  code-server 4.106.3 f128a7ac113916c9c29cf8d1361ab4b7f3bd9e75
+[2026-02-11T13:03:17.139Z] info  Using user-data-dir /data/data/com.termux/files/home/.local/share/code-server
+[2026-02-11T13:03:17.159Z] info  Using config file /data/data/com.termux/files/home/.config/code-server/config.yaml
+[2026-02-11T13:03:17.159Z] info  HTTP server listening on http://127.0.0.1:8089/
+[2026-02-11T13:03:17.160Z] info    - Authentication is disabled
+[2026-02-11T13:03:17.160Z] info    - Not serving HTTPS
+[2026-02-11T13:03:17.160Z] info  Session server listening on /data/data/com.termux/files/home/.local/share/code-server/code-server-ipc.sock
+
+** (xfdesktop:15545): WARNING **: 21:03:19.443: Failed to get system bus: Could not connect: No such file or directory
+/data/data/com.termux/files/usr/bin/mysqld_safe: Deprecated program name. It will be removed in a future release, use 'mariadbd-safe' instead
+Loading the library from the following files:
+	/data/data/com.termux/files/home/Yu/KiwiZim/kiwix.xml
+AH00558: httpd: Could not reliably determine the server's fully qualified domain name, using 127.0.0.1. Set the 'ServerName' directive globally to suppress this message
+httpd (pid 14968) already running
+[Wed Feb 11 21:06:00 2026] Failed to listen on localhost:8070 (reason: Address already in use)
+The library was successfully loaded.
+Unable to instantiate the HTTP daemon. The port 8084 is maybe already occupied or need more permissions to be open. Please try as root or with a port number higher or equal to 1024.
+260211 21:06:01 mysqld_safe Logging to '~/Yuoek/Yu/DB/localhost.err'.
+_XSERVTransSocketUNIXCreateListener: ...SocketCreateListener() failed
+_XSERVTransMakeAllCOTSServerListeners: server already running
+(EE) 
+Fatal server error:
+(EE) Cannot establish any listening sockets - Make sure an X server isn't already running(EE) 
+node:events:486
+      throw er; // Unhandled 'error' event
+      ^
+
+Error: listen EADDRINUSE: address already in use 0.0.0.0:8088
+    at Server.setupListenHandle [as _listen2] (node:net:1940:16)
+    at listenInCluster (node:net:1997:12)
+    at node:net:2206:7
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21)
+Emitted 'error' event on Server instance at:
+    at emitErrorNT (node:net:1976:8)
+    at process.processTicksAndRejections (node:internal/process/task_queues:89:21) {
+  code: 'EADDRINUSE',
+  errno: -98,
+  syscall: 'listen',
+  address: '0.0.0.0',
+  port: 8088
+}
+
+Node.js v24.11.1
+260211 21:06:01 mysqld_safe Starting mariadbd daemon with databases from ~/Yuoek/Yu/DB
+/data/data/com.termux/files/usr/bin/mariadbd-safe-helper: Can't create/write to file '~/Yuoek/Yu/DB/localhost.err' (Errcode: 2 "No such file or directory")
+[2026-02-11T13:06:02.009Z] info  code-server 4.106.3 f128a7ac113916c9c29cf8d1361ab4b7f3bd9e75
+[2026-02-11T13:06:02.014Z] info  Using user-data-dir /data/data/com.termux/files/home/.local/share/code-server
+[2026-02-11T13:06:02.027Z] error listen EADDRINUSE: address already in use 127.0.0.1:8089
