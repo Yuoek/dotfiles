@@ -22,7 +22,11 @@ proot-distro restore archlinux_20260404.tar.gz
 **ssh**
 ```bash
  ssh-keygen -t rsa -C "2055048783@qq.com"
+```
+```bash
  git config --global user.name "yuoek"
+```
+```bash
  git config --global user.email "2055048783@qq.com"
 ```
 
