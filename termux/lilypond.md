@@ -12,7 +12,7 @@ git clone https://github.com/martineausimon/nvim-lilypond-suite
 **下载** [FluidR3_GM.sf2](https://github.com/pianobooster/fluid-soundfont/releases/download/v3.1/FluidR3_GM.sf2)
 
 ```bash
-wget https://gh.llkk.cc/https://github.com/pianobooster/fluid-soundfont/releases/download/v3.1/FluidR3_GM.sf2
+wget https://github.com/pianobooster/fluid-soundfont/releases/download/v3.1/FluidR3_GM.sf2
 ```
 
 **创建软链接**
