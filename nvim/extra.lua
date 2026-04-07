@@ -84,13 +84,13 @@ return {
         -- end,
 
         -- [[deepseek]]
-        -- url = "https://api.deepseek.com/chat/completions",
-        -- model = "deepseek-chat",
-        -- api_type = "openai",
-        -- max_tokens = 4096,
-        -- fetch_key = function()
-        --   return vim.env.LLM_KEY
-        -- end,
+        url = "https://api.deepseek.com/chat/completions",
+        model = "deepseek-chat",
+        api_type = "openai",
+        max_tokens = 4096,
+        fetch_key = function()
+          return vim.env.LLM_KEY
+        end,
 
         -- [[ siliconflow ]]
         -- model = "THUDM/glm-4-9b-chat",
@@ -100,13 +100,13 @@ return {
         -- model = "Qwen/Qwen2.5-Coder-7B-Instruct",
         -- model = "internlm/internlm2_5-7b-chat",
         -- [optional: fetch_key]
-        url = "https://api.siliconflow.cn/v1/chat/completions",
-        api_type = "openai",
-        max_tokens = 4096,
-        model = "Qwen/Qwen2.5-7B-Instruct",
-        fetch_key = function()
-          return vim.env.SILICONFLOW_TOKEN
-        end,
+        -- url = "https://api.siliconflow.cn/v1/chat/completions",
+        -- api_type = "openai",
+        -- max_tokens = 8096,
+        -- model = "Qwen/Qwen2.5-7B-Instruct",
+        -- fetch_key = function()
+        --   return vim.env.SILICONFLOW_TOKEN
+        -- end,
 
         temperature = 0.3,
         top_p = 0.7,
@@ -549,15 +549,15 @@ You must:
       { "<leader>llme", mode = "v", "<cmd>LLMAppHandler CodeExplain<cr>", desc = " Explain the Code" },
       { "<leader>llmt", mode = "n", "<cmd>LLMAppHandler Translate<cr>", desc = " AI Translator" },
       { "<leader>llmC", mode = "x", "<cmd>LLMAppHandler TestCode<cr>", desc = " Generate Test Cases" },
-      { "<leader>llmo", mode = "x", "<cmd>LLMAppHandler OptimCompare<cr>", desc = " Optimize the Code" },
+      { "<leader>llmO", mode = "x", "<cmd>LLMAppHandler OptimCompare<cr>", desc = " Optimize the Code" },
       -- { "<leader>llau", mode = "n", "<cmd>LLMAppHandler UserInfo<cr>", desc = " Check Account Information" },
       { "<leader>llmg", mode = "n", "<cmd>LLMAppHandler CommitMsg<cr>", desc = " Generate AI Commit Message" },
       { "<leader>llmd", mode = "v", "<cmd>LLMAppHandler DocString<cr>", desc = " Generate a Docstring" },
       { "<leader>llmk", mode = { "v", "n" }, "<cmd>LLMAppHandler Ask<cr>", desc = " Ask LLM" },
       { "<leader>llma", mode = { "v", "n" }, "<cmd>LLMAppHandler AttachToChat<cr>", desc = " Ask LLM (multi-turn)" },
-      -- { "<leader>llao", mode = "x", "<cmd>LLMAppHandler OptimizeCode<cr>" },
-      -- { "<leader>llae", mode = "v", "<cmd>LLMSelectedTextHandler 请解释下面这段代码<cr>" },
-      -- { "<leader>llts", mode = "x", "<cmd>LLMSelectedTextHandler 英译汉<cr>" },
+      -- { "<leader>llmo", mode = "x", "<cmd>LLMAppHandler OptimizeCode<cr>" },
+      { "<leader>llme", mode = "v", "<cmd>LLMSelectedTextHandler 请解释下面这段代码<cr>" },
+      { "<leader>llmS", mode = "x", "<cmd>LLMSelectedTextHandler 英译汉<cr>" },
     },
   },
   "saghen/blink.cmp",
