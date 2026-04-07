@@ -1,55 +1,35 @@
-# dotfiles
-This is my conf
+# V1.00
 
-<!-- mtoc-start -->
+> [!info] 
+> 添加了 texlive, 配置 ssh  
+> 安装 git curl neovim mpv yazi termux-api fluidsynth lilypond lazygit glow gdb chafa debugpy
 
-* [Install](#install)
-* [Blog](#blog)
-* [Todo](#todo)
-
-<!-- mtoc-end -->
-
-## Termux 备份
-```bash
-tar -zcvf /sdcard/v0.10_termux_archlinux.tar.gz -C /data/data/com.termux/files ./home ./usr
-tar -zxvf /sdcard/v0.10_termux_archlinux_20260404.tar.gz -C /data/data/com.termux/files --recursive-unlink --preserve-permissions
-
-proot-distro backup archlinux --output archlinux_20260404.tar.gz
-proot-distro restore archlinux_20260404.tar.gz
-```
-
-## Install
-**ssh**
-```bash
- ssh-keygen -t rsa -C "2055048783@qq.com"
-```
-```bash
- git config --global user.name "yuoek"
-```
-```bash
- git config --global user.email "2055048783@qq.com"
-```
-
-**Dotfiles**
+## git
+**克隆 feactur 分支**
 ```bash
 git clone git@github.com:Yuoek/dotfiles ~/.yuoek
 ```
-
-## Blog
+**切换分支**
 ```bash
-git clone git@github.com:Yuoek/dotfiles ~/hugo
+git checkout feacture_v1.00
 ```
 
-## Todo
+**创建并切换分支**
+```bash
+git checkout -b feacture_v1.00
+```
+**查看分支**
+```bash
+git branch -vv
+```
 
-- [x] termux-desktop(openbox)
-- [x] terminal(zsh oh-my-zsh)
-- [x] proot-distro(archlinux)
-- [x] nvim(plugins)      
-- [x] hugo
+**推送分支**
+```bash
+git push origin feacture_v1.00
+```
 
-- [-] Todo(2026-04-06) 🚩
-- [ ] texlive
-- [ ] package
-- [-] 😃
-
+## zshrc
+**设置 texlive 环境变量**
+```bash
+source /data/data/com.termux/files/usr/etc/profile.d/texlive.sh
+```
