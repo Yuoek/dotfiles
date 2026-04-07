@@ -1,13 +1,10 @@
-
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+## texlive-bin
+source /data/data/com.termux/files/usr/etc/profile.d/texlive.sh
 
-export PATH=$PATH:$PREFIX/texlive/bin/aarch64-linux
-export MANPATH=$MANPATH:$PREFIX/texlive/texmf-dist/doc/man
-export INFOPATH=$INFOPATH:$PREFIX/texlive/texmf-dist/doc/info
-
- ## llm
+## llm
 export LLM_KEY=sk-eed203e77451477da6b0a55ac44e2246
 export SILICONFLOW_TOKEN=sk-psbulfyeksopdecegacsawiimusfpjdxoqkxudhivqnjbaim
 
