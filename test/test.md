@@ -12,6 +12,7 @@
 
 
 天气晴朗的一天, 我正在食堂里坐着敲打键盘, 侧对着窗子，男生，穿着黑色衣服, 年轻阳光
+![天气晴朗的一天, 我正在食堂里坐着敲打键盘, 侧对着窗子，男生，穿着黑色衣服, 年轻阳光](/data/data/com.termux/files/home/Yu/db/silionflow/20260407_171659.png)
 ![天气晴朗的一天, 我正在食堂里坐着敲打键盘, 侧对着窗子，男生，穿着黑色衣服, 年轻阳光](/data/data/com.termux/files/home/Yu/db/silionflow/20260406_155433.png)
 ![天气晴朗的一天, 我正在食堂里坐着敲打键盘, 侧对着窗子，男生，穿着黑色衣服, 年轻阳光](~/Yu/db/silionflow/20260406_151722.png)
 ![天气晴朗的一天, 我正在食堂里坐着敲打键盘, 侧对着窗子，男生，穿着黑色衣服](/data/data/com.termux/files/home/Yu/db/silionflow/20260406_151650.png)
@@ -20,3 +21,8 @@
 
 天堂电影院
 ![天堂电影院](/data/data/com.termux/files/home/Yu/db/silionflow/20260406_165727.png)
+
+[00:00:02] rec_2026-04-07_17-18-01.m4a
+![[00:00:02] rec_2026-04-07_17-18-01.m4a](/data/data/com.termux/files/home/Yu/db/silionflow/20260407_185057.png)
+[00:00:05] rec_2026-04-07_17-18-01.m4a
+

@@ -6,6 +6,7 @@ cd libtexprintf
 ./configure --prefix=$PREFIX
 make
 make install
+cd ..
 rm -r libtexprintf
 echo "测试"
 utftex '\frac{\alpha}{\beta+x}'
