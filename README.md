@@ -8,7 +8,7 @@
 - [x] nvim-plugins
 - [x] application 
 - [x] pkg-extra 🎏
-- [ ] Todo 2026-04-12
+- [ ] Todo 2026-04-13
 
 <!-- mtoc-start -->
 
@@ -21,12 +21,12 @@
 ## Termux restore
 **备份**
 ```bash
-tar -zcvf /sdcard/v3.01_termux.tar.gz -C /data/data/com.termux/files ./home ./usr
+tar -zcvf /sdcard/v3.00_termux.tar.gz -C /data/data/com.termux/files ./home ./usr
 ```
 
 **恢复备份**
 ```bash
-tar -zxvf /sdcard/v3.01_termux.tar.gz -C /data/data/com.termux/files --recursive-unlink --preserve-permissions
+tar -zxvf /sdcard/v3.00_termux.tar.gz -C /data/data/com.termux/files --recursive-unlink --preserve-permissions
 ```
 
 ## Pkg
@@ -230,7 +230,7 @@ pkg install php-fpm
 nvim $PREFIX/etc/php-fpm.d/www.conf
 ```
 
-*修改*
+*修改*  
 将
 ```markdown
 listen = /data/data/com.termux/files/usr/var/run/php-fpm.sock
@@ -287,7 +287,7 @@ echo '<?php phpinfo(); ?>' > $PREFIX/share/nginx/html/info.php
 
 *启动*
 ```bash
-php-fpmr
+php-fpm
 ```
 ```bash
 nginx -s reload
