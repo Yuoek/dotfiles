@@ -109,7 +109,7 @@ acpachectl restart
 nvim /data/data/com.termux/files/usr/etc/apache2/httpd.conf
 ```
 ```markdown
-LoadModule php_module /data/data/com.termux/files/usr/libexec/apache2/libphp.so 
+LoadModule php_module libexec/apache2/libphp.so 
 ```
 *注释*
 ```makrown
@@ -163,12 +163,12 @@ mariadbd-safe --datadir="$HOME/Yu/db/mariadb" &
 
 **打开**
 ```bash
-mariadb -u root
+mariadb -u u0_a122
 ```
 
 **dadbod 打开**
 ```bash
-mariadb://root@localhost:3306//yuoek
+mariadb://u0_a122@localhost:3306//yuoek
 ```
 ```bash
 sqlite:///$HOME/Yu/db/sqlite
@@ -176,10 +176,10 @@ sqlite:///$HOME/Yu/db/sqlite
 
 **修改密码**
 ```bash
-usr mysql;
+usr test;
 ```
 ```bash
-set password for 'root'@'localhost' = password('你设置的密码');
+set password for 'u0_a122'@'localhost' = password('123456');
 ```
 ```bash
 flush privileges;
@@ -307,7 +307,7 @@ php -S 127.0.0.1:8088
 
 15. [dvwa]()
 ```bash
- wget https://github.com/ethicalhack3r/DVWA/archive/master.zip
+wget https://github.com/ethicalhack3r/DVWA/archive/master.zip
 ```
 ```bash
 unzip master.zip -d $PREFIX/share/nginx/html/
@@ -327,7 +327,7 @@ cd $PREFIX/share/nginx/html/dvwa/config
 mv config.inc.php.dist config.inc.php
 ```
 ```bash
-vim mv config.inc.php.dist config.inc.php
+nvim config.inc.php
 ```
 
 **php.ini 配置**
@@ -335,7 +335,12 @@ vim mv config.inc.php.dist config.inc.php
 php --ini
 ```
 ```bash
- echo 'allow_url_include = On' > $PREFIX/etc/php/php.ini
+echo 'allow_url_include = On' > $PREFIX/etc/php/php.ini
+```
+
+**创建数据库**
+```bash
+mariadb -uu0_a122 -p123456 -e"create database dvwa;show databases;"
 ```
 
 **启动**
