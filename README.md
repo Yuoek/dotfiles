@@ -118,7 +118,7 @@ acpachectl restart
 nvim /data/data/com.termux/files/usr/etc/apache2/httpd.conf
 ```
 ```markdown
-LoadModule php_module /data/data/com.termux/files/usr/libexec/apache2/libphp.so 
+LoadModule php_module libexec/apache2/libphp.so 
 ```
 *注释*
 ```makrown
@@ -172,7 +172,7 @@ mariadbd-safe --datadir="$HOME/Yu/db/mariadb" &
 
 **打开**
 ```bash
-mariadb -u root
+mariadb -u u0_a122
 ```
 
 **dadbod 打开**
@@ -206,7 +206,7 @@ nginx -t
 
 **修改配置文件, 端口改为:8081**
 ```bash
- nvim $PREFIX/etc/nginx/nginx.conf
+nvim $PREFIX/etc/nginx/nginx.conf
 ```
 
 **启动/重加载/停止**
@@ -306,7 +306,7 @@ pkg install php
 ```
 **创建 index.php 文件**
 ```bash
- echo '<?php phpinfo();?>' > www/index.php
+echo '<?php phpinfo();?>' > www/index.php
 ```
 
 **启动**
@@ -316,7 +316,7 @@ php -S 127.0.0.1:8088
 
 15. [dvwa]()
 ```bash
- wget https://github.com/ethicalhack3r/DVWA/archive/master.zip
+wget https://github.com/ethicalhack3r/DVWA/archive/master.zip
 ```
 ```bash
 unzip master.zip -d $PREFIX/share/nginx/html/
@@ -349,7 +349,7 @@ mysql -uu0_a122 -p123456 -e"create database dvwa;show databases;"
 php --ini
 ```
 ```bash
- echo 'allow_url_include = On' > $PREFIX/etc/php/php.ini
+echo 'allow_url_include = On' > $PREFIX/etc/php/php.ini
 ```
 
 **启动**
