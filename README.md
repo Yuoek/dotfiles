@@ -1,4 +1,4 @@
-# V3.00
+# V3.01
 
 > [!INFO] 
 > 推荐的 linux 软件
@@ -282,6 +282,9 @@ php-fpm
 ```
 ```bash
 nginx -s reload
+```
+```bash
+http://127.0.0.1:8081/info.php
 ```
 
 13. [http-server]()
