@@ -1,4 +1,4 @@
-# V3.01
+# V3.00
 
 > [!INFO] 
 > 推荐的 linux 软件
@@ -62,9 +62,18 @@ pkg install kdenlive kdenlive-static
 
 5. [octave]()
 ```bash
-pkg install octave octave-x
-
+pkg install octave 
 ```
+```bash
+pkg install octave-x
+```
+```bash
+pkg install octave-static
+```
+```bash
+pkg install octave-x-static
+```
+
 **命令行运行**
 ```bash
 octave --no-gui octave.m
@@ -179,7 +188,7 @@ sqlite:///$HOME/Yu/db/sqlite
 usr mysql;
 ```
 ```bash
-set password for 'root'@'localhost' = password('你设置的密码');
+set password for 'u0_a122'@'localhost' = password('123456');
 ```
 ```bash
 flush privileges;
@@ -283,6 +292,9 @@ php-fpmr
 ```bash
 nginx -s reload
 ```
+```bash
+http://127.0.0.1:8081/info.php
+```
 
 13. [http-server]()
 ```bash
@@ -324,7 +336,12 @@ cd $PREFIX/share/nginx/html/dvwa/config
 mv config.inc.php.dist config.inc.php
 ```
 ```bash
-vim mv config.inc.php.dist config.inc.php
+nvim config.inc.php
+```
+
+**创建 dvwa 数据库**
+```bash
+mysql -uu0_a122 -p123456 -e"create database dvwa;show databases;"
 ```
 
 **php.ini 配置**
