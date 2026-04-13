@@ -1,4 +1,4 @@
-# V3.01
+# V3.00
 
 > [!INFO] 
 > 推荐的 linux 软件
@@ -278,7 +278,7 @@ echo '<?php phpinfo(); ?>' > $PREFIX/share/nginx/html/info.php
 
 *启动*
 ```bash
-php-fpmr
+php-fpm
 ```
 ```bash
 nginx -s reload
