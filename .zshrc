@@ -1,6 +1,18 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+alias push='
+git submodule foreach "
+  git checkout main 2>/dev/null || git checkout master 2>/dev/null || echo \"子模块 \$name 无 main/master 分支，跳过\"
+  git add .
+  git commit -m \"更新子模块 \$name: 提交所有本地修改\" 2>/dev/null || echo \"子模块 \$name 无修改，跳过提交\"
+  git push 2>/dev/null || echo \"子模块 \$name 推送失败，请手动处理\"
+"
+git add .
+git commit -m "更新所有子模块引用" 2>/dev/null || echo "主项目无变更，跳过提交"
+git push origin main
+'
+
 ## texlive-bin
 source /data/data/com.termux/files/usr/etc/profile.d/texlive.sh
 
