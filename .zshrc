@@ -1,15 +1,23 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+alias yuoek='cd ~/Yuoek && nvim yuoek.md'
+alias help='cd ~/Yuoek/db/rime/external/data/rime/lua && nvim help.lua'
+alias rime='cd ~/Yuoek/db/rime/external/data/rime && nvim'
+alias symble='cd ~/Yuoek/db/rime/external/data/rime && nvim symbols.yaml'
+alias dict='cd ~/Yuoek/db/rime/external/data/rime/lua && nvim "phraseExt personal.txt"'
+alias personal='cd ~/Yuoek/db/rime/external/data/rime/lua/ && nvim "phraseComment personal.txt"'
+alias rimezip='cd ~/Yuoek/db/rime && echo "rime.zip Deleted" && echo "now is zipping" && rm -rf rime.zip && zip -r rime.zip * && echo "zip Finished" && echo "move to ~/Yu/db/zip/" && mv rime.zip ~/Yu/db/zip'
+
 alias push='
 git submodule foreach "
-  git checkout main 2>/dev/null || git checkout master 2>/dev/null || echo \"子模块 \$name 无 main/master 分支，跳过\"
+  git checkout main 2>/dev/null || git checkout master 2>/dev/null || echo \"submodule \$name no main/master branch, skip\"
   git add .
-  git commit -m \"更新子模块 \$name: 提交所有本地修改\" 2>/dev/null || echo \"子模块 \$name 无修改，跳过提交\"
-  git push 2>/dev/null || echo \"子模块 \$name 推送失败，请手动处理\"
+  git commit -m \" push \$name: finish \" 2>/dev/null || echo \"submodule \$name skip\"
+  git push 2>/dev/null || echo \"submodule \$name push error\"
 "
 git add .
-git commit -m "更新所有子模块引用" 2>/dev/null || echo "主项目无变更，跳过提交"
+git commit -m "push all submodules" 2>/dev/null || echo " nothing to push"
 git push origin main
 '
 
