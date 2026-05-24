@@ -1,10 +1,13 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+
 alias yuoek='cd ~/Yuoek && nvim yuoek.md'
 alias help='cd ~/Yuoek/db/rime/external/data/rime/lua && nvim help.lua'
 alias rime='cd ~/Yuoek/db/rime/external/data/rime && nvim'
-alias symble='cd ~/Yuoek/db/rime/external/data/rime && nvim symbols.yaml'
+alias symbols='cd ~/Yuoek/db/rime/external/data/rime/yuoek/symbols && nvim zero.md'
+alias symbolscat='cd ~/Yuoek/db/rime/external/data/rime/yuoek && cat symbols/*.md > ../symbols.yaml'
+alias symbolstoc='cd ~/Yuoek/db/rime/external/data/rime/yuoek/symbols && toclink . zero.md'
 alias dict='cd ~/Yuoek/db/rime/external/data/rime/lua && nvim "phraseExt personal.txt"'
 alias personal='cd ~/Yuoek/db/rime/external/data/rime/lua/ && nvim "phraseComment personal.txt"'
 alias rimezip='cd ~/Yuoek/db/rime && echo "rime.zip Deleted" && echo "now is zipping" && rm -rf rime.zip && zip -r rime.zip * && echo "zip Finished" && echo "move to ~/Yu/db/zip/" && mv rime.zip ~/Yu/db/zip'
@@ -161,3 +164,93 @@ alias rel='termux-reload-settings'
 #alias archfs='sftp -i ~/.ssh/id_rsa.DEVICE UNAME@IP'
 
 neofetch
+
+# symble/*.md -> zero.md
+toclink() {
+  local dir="${1:-$HOME/Yuoek/db/rime/external/data/rime/symbles}"
+  local out="${2:-$HOME/Yuoek/db/rime/external/data/rime/symbles/zero.md}"
+  for f in "$dir"/*.md; do
+    if [ -f "$f" ]; then
+      name=$(basename "$f" .md)
+      echo "## [$name]($name.md)"
+    fi
+  done > "$out"
+}
+
+
+
+
+symblelink() {
+  cd "$HOME" || { echo "❌ 无法进入 HOME 目录"; return 1; }
+
+  local dir="${1:-$HOME/Yuoek/db/rime/yuoek/symbols}"
+  local out_yaml="${2:-$HOME/Yuoek/db/rime/symbols.yaml}"
+  # 修正为带空格文件名路径
+  local out_personal="${3:-"$HOME/Yuoek/db/rime/lua/phraseComment personal.txt"}"
+
+  echo "====================================="
+  echo "📂 源目录: $dir"
+  echo "📄 YAML输出: $out_yaml"
+  echo "📄 Personal输出: $out_personal"
+  echo "====================================="
+
+  if [[ ! -d "$dir" ]]; then
+    echo "❌ 错误：源目录不存在 -> $dir"
+    return 1
+  fi
+
+  echo "[1/5] 创建输出目录"
+  mkdir -p "$(dirname "$out_yaml")"
+  mkdir -p "$(dirname "$out_personal")"
+
+  echo "[2/5] 初始化空白文件"
+  echo -n > "$out_yaml"
+  echo -n > "$out_personal"
+
+  # 按文件名排序读取，排除 zero.md
+  echo "[3/5] 按序读取MD文档，跳过zero.md"
+  local md_list
+  IFS=$'\n' md_list=($(ls -1 "$dir"/*.md 2>/dev/null | sort | grep -v zero.md))
+  unset IFS
+
+  local total_file=${#md_list[@]}
+  if [[ $total_file -eq 0 ]]; then
+    echo "ℹ️ 排除zero.md后无待处理文件"
+    return 0
+  fi
+  echo "[3/5] 总计 $total_file 个文件待处理"
+  echo
+
+  local count=0
+  for file in "${md_list[@]}"; do
+    ((count++))
+    echo "[进度 $count/$total_file] 处理：$(basename "$file")"
+
+    # yaml 过滤二级标题，原样留存内容
+    awk '!/^## /' "$file" >> "$out_yaml"
+    echo "" >> "$out_yaml"
+
+    awk '
+    BEGIN{OFS="\t"}
+    /^## /{
+      title=substr($0,4)
+      getline
+      gsub(/^[ \t]+|[ \t]+$/,"")
+      gsub(/,$/,"")
+      # 正常原样输出 &nbsp;
+      gsub(/ /,"\\&nbsp",title)
+      gsub(/ /,"\\&nbsp",$0)
+      if($0 != ""){
+        print $0, title
+      }
+    }
+    ' "$file" >> "$out_personal"
+  done
+
+  echo
+  echo "====================================="
+  echo "✅ 处理完成：空格转为&nbsp原样输出"
+  echo "symbles.yaml 行数：$(wc -l < "$out_yaml")"
+  echo "personal.txt 行数：$(wc -l < "$out_personal")"
+  echo "====================================="
+}

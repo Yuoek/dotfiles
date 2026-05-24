@@ -873,15 +873,43 @@ You must:
   },                                                                         
 
   -- 11. vimtex
- {
+  -- TODO
+ -- {
+ --  "lervag/vimtex",
+ --    lazy = false,     -- we don't want to lazy load VimTeX
+ --    -- tag = "v2.15", -- uncomment to pin to a specific release
+ --    init = function()
+ --      -- VimTeX configuration goes here, e.g.
+ --      vim.g.vimtex_view_method = "default"
+ --    end
+ --  },
+ 
+
+{
   "lervag/vimtex",
-    lazy = false,     -- we don't want to lazy load VimTeX
-    -- tag = "v2.15", -- uncomment to pin to a specific release
-    init = function()
-      -- VimTeX configuration goes here, e.g.
-      vim.g.vimtex_view_method = "default"
-    end
-  },
+  lazy = false,
+  init = function()
+    -- 基础查看器设置
+    vim.g.vimtex_view_method = "okular"
+
+    -- 核心：强制使用 XeLaTeX 引擎编译
+    vim.g.vimtex_compiler_method = 'latexmk'
+    vim.g.vimtex_compiler_latexmk_engines = {
+        ['_'] = '-xelatex',  -- 所有文件默认用 xelatex
+    }
+
+    -- 可选：开启连续编译（保存自动编译）
+    vim.g.vimtex_compiler_latexmk = {
+        executable = 'latexmk',
+        options = {
+            '-pdf',
+            '-latex=xelatex',
+            '-interaction=nonstopmode',
+            '-synctex=1',
+        },
+    }
+  end,
+},
 
   -- 10. lilypond
   { 
@@ -1073,10 +1101,10 @@ You must:
 
       -- 字典配置
       local dict = {
-        ["*"] = { vim.fn.expand("~/Yu/db/english-words/words.txt") },
+        ["*"] = { vim.fn.expand("~/Yuoek/db/english-words/words.txt") },
         ft = {
-          lua = { vim.fn.expand("~/Yu/db/english-words/words.txt") },
-          python = { vim.fn.expand("~/Yu/db/english-words/words.txt") },
+          lua = { vim.fn.expand("~/Yuoek/db/english-words/words.txt") },
+          python = { vim.fn.expand("~/Yuoek/db/english-words/words.txt") },
         },
       }
 
