@@ -15,7 +15,7 @@ local fn = vim.fn
 
 -- ===================== 配置 =====================
 local config = {
-  record_dir = fn.expand("~/Yu/db/recordings/"),
+  record_dir = fn.expand("~/Yuoek/db/recordings/"),
   leader     = " ",
 }
 -- ===============================================
@@ -287,7 +287,7 @@ vim.api.nvim_create_autocmd("FileType", {
     end
 
     local source_dir = "~/storage/shared/Pictures/"
-    local target_dir = "~/Yu/db/screenShots"
+    local target_dir = "~/Yuoek/db/screenShots"
 
     -- <leader>aj 插入最新图片
     vim.keymap.set("n", "<leader>aj", function()
@@ -394,7 +394,7 @@ end, { desc = 'Chafa 图片预览' })
 -- ## 硅基流动生成图片
 -- ====================== 全局环境变量 ======================
 local SILICONFLOW_TOKEN = vim.env.SILICONFLOW_TOKEN or ""
-local SAVE_DIR = vim.fn.expand("~/Yu/db/silionflow")
+local SAVE_DIR = vim.fn.expand("~/Yuoek/db/silionflow")
 vim.fn.mkdir(SAVE_DIR, "p") -- 自动创建目录
 
 -- 工具函数：生成时间戳文件名

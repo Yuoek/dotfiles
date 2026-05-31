@@ -1042,7 +1042,7 @@ You must:
     dependencies = { "delphinus/skkeleton_indicator.nvim" },
     config = function()
       -- 本地词库路径，避免网络问题
-      local eskk_dir = vim.fn.expand("~/Yu/db/eskk")
+      local eskk_dir = vim.fn.expand("~/Yuoek/db/words/eskk")
       vim.fn.mkdir(eskk_dir, "p")
       vim.g["eskk#directory"] = eskk_dir
       vim.g["eskk#dictionary"] = {
@@ -1101,10 +1101,10 @@ You must:
 
       -- 字典配置
       local dict = {
-        ["*"] = { vim.fn.expand("~/Yuoek/db/english-words/words.txt") },
+        ["*"] = { vim.fn.expand("~/Yuoek/db/words/english-words/words.txt") },
         ft = {
-          lua = { vim.fn.expand("~/Yuoek/db/english-words/words.txt") },
-          python = { vim.fn.expand("~/Yuoek/db/english-words/words.txt") },
+          lua = { vim.fn.expand("~/Yuoek/db/words/english-words/words.txt") },
+          python = { vim.fn.expand("~/Yuoek/db/words/english-words/words.txt") },
         },
       }
 

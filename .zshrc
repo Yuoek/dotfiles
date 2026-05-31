@@ -1,8 +1,9 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
-
+alias vnc='cd $PREFIX/tmp && rm -rf .X11-unix/X1 .X1-lock && vncserver :1'
 alias yuoek='cd ~/Yuoek && nvim yuoek.md'
+alias pdf='cd ~/Yuoek/pdf && nvim Yu.tex'
 alias help='cd ~/Yuoek/db/rime/external/data/rime/lua && nvim help.lua'
 alias rime='cd ~/Yuoek/db/rime/external/data/rime && nvim'
 alias symbols='cd ~/Yuoek/db/rime/external/data/rime/yuoek/symbols && nvim zero.md'

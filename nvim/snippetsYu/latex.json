@@ -1,0 +1,46 @@
+ 
+{
+
+    "tikz": {
+        "prefix": "tikz",
+        "body": "\\begin{center}\n\\resizebox{${1:0.6}\\textwidth}{!}{\n\\begin{tikzpicture}\n${2}\n\\end{tikzpicture}\n}\n\\end{center}",
+
+        "description": "tikz"
+    },
+    "code": {
+        "prefix": "code",
+        "body": "\\lstset{language=${1:Python}}\n\\begin{lstlisting}\n${2}\n\\end{lstlisting}",
+        "description": "代码块"
+    },
+    "quote": {
+        "prefix": "quote",
+        "body": "${1} \\par\n${2} \\par\n\\hfill --- ${3} \\par",
+        "description": "每日一句"
+    },
+    "section quote": {
+        "prefix": "sday",
+        "body": "\\section*{${CURRENT_YEAR}-${CURRENT_MONTH}-${CURRENT_DATE}}\n",
+        "description": "section day"
+    },
+    "subsection": {
+        "prefix": "sb",
+        "body": "\\subsection{${1}}",
+        "description": "子章节"
+    },
+    "subsubsection": {
+        "prefix": "ssb",
+        "body": "\\subsubsection{${1}}",
+        "description": "子子章节"
+    },
+    "list": {
+        "prefix": "lista",
+        "body": "\\begin{enumerate}\n  \\renewcommand{\\labelenumi}{(\\arabic*)}\n  \\item ${1}\n\\end{enumerate}",
+        "description": "有序列表（小写数字编号）"
+    },
+    "list": {
+        "prefix": "listb",
+        "body": "\\begin{enumerate}\n  \\renewcommand{\\labelenumi}{(\\alph*)}\n  \\item ${1}\n\\end{enumerate}",
+        "description": "有序列表（小写字母编号）"
+    }
+}
+
