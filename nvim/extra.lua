@@ -1,14 +1,65 @@
 return {
 
+  -- 20. leetcode.nvim
+  -- {
+  --   "kawre/leetcode.nvim",
+  --
+  --   lazy = false,
+  -- --   build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
+  --   dependencies = {
+  --     "nvim-telescope/telescope.nvim",
+  --     -- "ibhagwan/fzf-lua",
+  --     "nvim-lua/plenary.nvim",
+  --     "MunifTanjim/nui.nvim",
+  --   },
+  --   opts = {
+  --     -- configuration goes here
+  --     cn = { -- leetcode.cn
+  --       enabled = true, ---@type boolean
+  --       translator = true, ---@type boolean
+  --       translate_problems = true, ---@type boolean
+  --     },
+  --
+  --     ---@type boolean
+  --     image_support = true,
+  --
+  --     injector = { ---@type table<lc.lang, lc.inject>
+  --       ["python3"] = {
+  --         before = true,
+  --       },
+  --       ["cpp"] = {
+  --         before = { "#include <bits/stdc++.h>", "using namespace std;" },
+  --         after = "int main() {}",
+  --       },
+  --       ["java"] = {
+  --         before = "import java.util.*;",
+  --       },
+  --     },
+  --   },
+  -- },
+  {
+    "kawre/leetcode.nvim",
+    lazy = false,
+    -- build = ":TSUpdate html", -- if you have `nvim-treesitter` installed
+    dependencies = {
+        -- include a picker of your choice, see picker section for more details
+        "nvim-lua/plenary.nvim",
+        "MunifTanjim/nui.nvim",
+    },
+    opts = {
+        -- configuration goes here
+    },
+  },
+
   -- 19. todo-comments
   {
-  "folke/todo-comments.nvim",
-  lazy = false,
-  dependencies = { "nvim-lua/plenary.nvim" },
-    opts = {
-      -- your configuration comes here
-      -- or leave it empty to use the default settings
-      -- refer to the configuration section below
+    "folke/todo-comments.nvim",
+    lazy = false,
+    dependencies = { "nvim-lua/plenary.nvim" },
+      opts = {
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
     }
   },
 
