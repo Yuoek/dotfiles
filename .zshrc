@@ -259,3 +259,23 @@ symblelink() {
   echo "personal.txt 行数：$(wc -l < "$out_personal")"
   echo "====================================="
 }
+
+
+
+
+## proot-distro ubuntu
+
+
+. "$HOME/.local/bin/env"
+export LANG=en_US.UTF-8 LC_export PATH="$HOME/.local/bin:$PATH"ALL=en_US.UTF-8
+
+
+export DOTNET_ROOT=$HOME/.dotnet
+export PATH=$PATH:$DOTNET_ROOT:$DOTNET_ROOT/tools
+export DOTNET_GCHeapHardLimit=1C0000000 
+
+export PATH=$HOME/arm-gnu-toolchain-15.2.rel1-aarch64-arm-none-eabi/bin:$PATH
+
+
+# export PATH="$HOME/.local/bin:$PATH"
+
