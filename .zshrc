@@ -1,6 +1,10 @@
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:$HOME/.local/bin:/usr/local/bin:$PATH
 
+
+alias kiwix='kiwix-serve --library /sdcard/kiwiZim/Kiwix.xml --port 8090 &'
+alias ubuntu='nohup ~/startxfce4_ubuntu.sh &'
+
 alias vnc='cd $PREFIX/tmp && rm -rf .X11-unix/X1 .X1-lock && vncserver :1'
 alias yuoek='cd ~/Yuoek && nvim yuoek.md'
 alias pdf='cd ~/Yuoek/pdf && nvim Yu.tex'
